@@ -1,0 +1,25 @@
+local plugins = {}
+
+table.insert(plugins, require("v.modules.plugins.lsp"))
+table.insert(plugins, require("v.modules.plugins.autopairs"))
+table.insert(plugins, require("v.modules.plugins.catppuccin"))
+table.insert(plugins, require("v.modules.plugins.cmp"))
+table.insert(plugins, require("v.modules.plugins.colorizer"))
+table.insert(plugins, require("v.modules.plugins.comment"))
+table.insert(plugins, require("v.modules.plugins.devicons"))
+table.insert(plugins, require("v.modules.plugins.diffview"))
+table.insert(plugins, require("v.modules.plugins.fidget"))
+table.insert(plugins, require("v.modules.plugins.gitsigns"))
+table.insert(plugins, require("v.modules.plugins.heirline"))
+table.insert(plugins, require("v.modules.plugins.hlargs"))
+table.insert(plugins, require("v.modules.plugins.indent"))
+table.insert(plugins, require("v.modules.plugins.markdown"))
+table.insert(plugins, require("v.modules.plugins.navigator"))
+table.insert(plugins, require("v.modules.plugins.nvimtree"))
+table.insert(plugins, require("v.modules.plugins.signature"))
+table.insert(plugins, require("v.modules.plugins.surround"))
+table.insert(plugins, require("v.modules.plugins.telescope"))
+table.insert(plugins, require("v.modules.plugins.treesitter"))
+table.insert(plugins, require("v.modules.plugins.which_key"))
+
+return plugins

@@ -1,0 +1,4 @@
+--theme="base16"
+-pp
+--italic-text=always
+--pager=never
