@@ -41,7 +41,7 @@ _.setup = function(on_attach, capabilities)
 					unusedLocalExclude = { "_*" },
 				},
 				format = {
-					enable = false,
+					enable = true,
 				},
 			},
 		},

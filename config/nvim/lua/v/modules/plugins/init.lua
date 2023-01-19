@@ -1,5 +1,7 @@
 local plugins = {}
 
+table.insert(plugins, require("v.modules.plugins.mason"))
+table.insert(plugins, require("v.modules.plugins.mason-lspconfig"))
 table.insert(plugins, require("v.modules.plugins.lsp"))
 table.insert(plugins, require("v.modules.plugins.autopairs"))
 table.insert(plugins, require("v.modules.plugins.catppuccin"))
