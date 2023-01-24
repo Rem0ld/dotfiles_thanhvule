@@ -67,7 +67,58 @@ end)
 map("n", "<leader>fo", function()
   require("telescope.builtin").oldfiles()
 end)
--- TODO add all telescope mappigns
+map("n", "<leader>fw", function()
+  require("telescope.builtin").live_grep()
+end)
+map("n", "<leader>fW", function()
+  require("telescope.builtin").live_grep({
+    additional_args = function(args)
+      return vim.list_extends(args, { "--hidden", "--no-ignore" })
+    end,
+  })
+end)
+map("n", "<leader>sb", function()
+  require("telescope.builtin").git_branches()
+end)
+map("n", "<leader>sh", function()
+  require("telescope.builtin").help_tags()
+end)
+map("n", "<leader>sm", function()
+  require("telescope.builtin").man_pages()
+end)
+map("n", "<leader>sr", function()
+  require("telescope.builtin").registers()
+end)
+map("n", "<leader>sk", function()
+  require("telescope.builtin").keymaps()
+end)
+map("n", "<leader>sc", function()
+  require("telescope.builtin").commands()
+end)
+map("n", "<leader>sn", function()
+  require("telescope").extensions.notify.notify()
+end)
+map("n", "<leader>ls", function()
+  local aerial_avail, _ = pcall(require, "aerial")
+  if aerial_avail then
+    require("telescope").extensions.aerial.aerial()
+  else
+    require("telescope.builtin").lsp_document_symbols()
+  end
+end)
+map("n", "<leader>lD", function()
+  require("telescope.builtin").diagnostics()
+end)
+
+-- Terminal
+if is_available("toggleterm.nvim") then
+  local toggle_term_cmd = global.toggle_term_cmd
+  if vim.fn.executable("gitui") == 1 then
+    map("n", "<leader>gg", function()
+      toggle_term_cmd("gitui")
+    end)
+  end
+end
 
 -- VISUAL
 -- Move lines
