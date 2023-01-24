@@ -111,7 +111,8 @@ map("n", "<leader>lD", function()
 end)
 
 -- Terminal
-if is_available("toggleterm.nvim") then
+local ok, _ = pcall(require, "toggleterm.nvim")
+if ok then
   local toggle_term_cmd = global.toggle_term_cmd
   if vim.fn.executable("gitui") == 1 then
     map("n", "<leader>gg", function()
